@@ -1,0 +1,12 @@
+<section class="categorii contentor" id="categorii" aria-labelledby="categorii-titlu">
+  <h2 id="categorii-titlu">Explorează categoriile</h2>
+  <div class="categorii__grid">
+    @for (c of categorii; track c.slug) {
+      <article [class]="'categorie categorie--' + c.slug">
+        <h3>{{ c.titlu }}</h3>
+        <p>{{ c.text }}</p>
+        <a routerLink="/stiri">{{ c.link }}</a>
+      </article>
+    }
+  </div>
+</section>

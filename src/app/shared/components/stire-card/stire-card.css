@@ -1,0 +1,66 @@
+:host {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--suprafata);
+  border: 1px solid var(--linie);
+  border-radius: var(--raza);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(18, 23, 43, 0.1);
+}
+.card__eticheta {
+  align-self: flex-start;
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.card__titlu {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.card__rezumat {
+  flex: 1;
+  margin: 0;
+  color: var(--text-estompat);
+}
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--linie);
+  font-size: 0.85rem;
+  color: var(--text-estompat);
+}
+
+.card--tech {
+  border-top: 4px solid var(--tech);
+}
+.card--tech .card__eticheta {
+  background: var(--tech);
+}
+.card--gaming {
+  border-top: 4px solid var(--gaming);
+}
+.card--gaming .card__eticheta {
+  background: var(--gaming);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

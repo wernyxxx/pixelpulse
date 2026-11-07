@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+.categorii__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .categorii__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.categorie {
+  background: var(--suprafata);
+  border: 1px solid var(--linie);
+  border-left: 6px solid var(--linie);
+  border-radius: var(--raza);
+  padding: 1.5rem;
+}
+.categorie h3 {
+  font-size: 1.4rem;
+}
+.categorie a {
+  font-weight: 700;
+}
+
+.categorie--tech {
+  border-left-color: var(--tech);
+}
+.categorie--tech h3,
+.categorie--tech a {
+  color: var(--tech);
+}
+.categorie--gaming {
+  border-left-color: var(--gaming);
+}
+.categorie--gaming h3,
+.categorie--gaming a {
+  color: var(--gaming);
+}

@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.hero {
+  background: var(--ink);
+  color: #ffffff;
+  border-bottom: 8px solid;
+  /* bara de jos împarte lățimea în cele două categorii */
+  border-image: linear-gradient(90deg, var(--tech) 50%, var(--gaming) 50%) 1;
+}
+.hero__interior {
+  max-width: var(--latime-max);
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+.hero__titlu {
+  max-width: 18ch;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: #ffffff;
+}
+.hero__text {
+  max-width: 48ch;
+  font-size: 1.15rem;
+  color: #c9cee3;
+}
+.hero__actiuni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.hero__actiuni .buton--secundar {
+  border-color: rgba(255, 255, 255, 0.5);
+}

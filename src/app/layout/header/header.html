@@ -1,0 +1,11 @@
+<header class="header">
+  <a class="header__logo" routerLink="/">Pixel<span>Pulse</span></a>
+  <nav class="header__nav" aria-label="Navigare principală">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="activ" [routerLinkActiveOptions]="{ exact: true }">Acasă</a></li>
+      <li><a routerLink="/stiri" routerLinkActive="activ">Știri</a></li>
+      <li><a routerLink="/despre" routerLinkActive="activ">Despre</a></li>
+      <li><a routerLink="/" fragment="newsletter">Newsletter</a></li>
+    </ul>
+  </nav>
+</header>

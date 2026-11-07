@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.pagina__coloane {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1100px) {
+  .pagina__coloane {
+    grid-template-columns: 2fr 1fr;
+  }
+}

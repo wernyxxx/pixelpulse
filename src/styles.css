@@ -1,0 +1,105 @@
+/* ===== Variabile globale (înlocuiesc variabilele SCSS din Lab 1) ===== */
+:root {
+  --fundal: #f3f5fa;
+  --suprafata: #ffffff;
+  --ink: #12172b;
+  --text: #1d2340;
+  --text-estompat: #5a6283;
+  --linie: #dce0ec;
+  --tech: #0b63e5;
+  --gaming: #c2185b;
+  --raza: 10px;
+  --latime-max: 1100px;
+  --font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== Reset și bază ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--fundal);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+a:focus-visible {
+  outline: 3px solid var(--tech);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  margin: 0 0 1rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+/* ===== Clase comune, folosite în mai multe componente ===== */
+.contentor {
+  max-width: var(--latime-max);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.buton {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid transparent;
+  border-radius: var(--raza);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.buton:hover {
+  transform: translateY(-2px);
+}
+.buton:focus-visible {
+  outline: 3px solid var(--tech);
+  outline-offset: 3px;
+}
+.buton--primar {
+  background: var(--tech);
+  color: #ffffff;
+}
+.buton--secundar {
+  border-color: var(--text-estompat);
+  color: inherit;
+}
+
+.stiri__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .stiri__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.eroare {
+  color: var(--gaming);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buton {
+    transition: none;
+  }
+}

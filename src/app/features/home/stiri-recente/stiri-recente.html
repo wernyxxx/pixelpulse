@@ -1,0 +1,17 @@
+<section class="stiri" id="stiri" aria-labelledby="stiri-titlu">
+  <h2 id="stiri-titlu">Ultimele noutăți</h2>
+
+  @if (stiriService.seIncarca()) {
+    <p>Se încarcă…</p>
+  } @else if (stiriService.eroare()) {
+    <p class="eroare">{{ stiriService.eroare() }}</p>
+  } @else {
+    <div class="stiri__grid">
+      @for (s of stiriService.recente(); track s.id) {
+        <app-stire-card [stire]="s" />
+      } @empty {
+        <p>Nu există nicio știre.</p>
+      }
+    </div>
+  }
+</section>

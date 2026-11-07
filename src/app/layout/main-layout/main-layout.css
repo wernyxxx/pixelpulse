@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header / conținut / footer */
+  min-height: 100vh;
+}

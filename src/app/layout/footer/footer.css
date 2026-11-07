@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--ink);
+  color: #c9cee3;
+}
+.footer__text {
+  margin: 0;
+}
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.footer__nav a {
+  text-decoration: none;
+}
+.footer__nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

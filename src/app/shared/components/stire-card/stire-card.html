@@ -1,0 +1,10 @@
+<article [class]="'card card--' + stire().categorie">
+  <span class="card__eticheta">{{ stire().categorie }}</span>
+  <h3 class="card__titlu">{{ stire().titlu }}</h3>
+  <p class="card__rezumat">{{ stire().rezumat }}</p>
+  <footer class="card__meta">
+    <span>{{ stire().autor }}</span>
+    <time [attr.datetime]="stire().data">{{ stire().data }}</time>
+    <span>{{ stire().minuteCitire | citire }}</span>
+  </footer>
+</article>

@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  align-self: start;
+}
+
+.top {
+  background: var(--suprafata);
+  border: 1px solid var(--linie);
+  border-radius: var(--raza);
+  padding: 1.5rem;
+}
+.top h2 {
+  font-size: 1.3rem;
+}
+.top__lista {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+.top__lista li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--linie);
+}
+.top__lista li:last-child {
+  border-bottom: 0;
+}
+.top__lista li::marker {
+  font-weight: 700;
+  color: var(--tech);
+}
+.top__lista a {
+  text-decoration: none;
+}
+.top__lista a:hover {
+  text-decoration: underline;
+}

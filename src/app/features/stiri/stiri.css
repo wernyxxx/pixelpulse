@@ -1,0 +1,32 @@
+:host {
+  display: block;
+}
+
+.filtre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.filtre button {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid var(--linie);
+  border-radius: 999px;
+  background: var(--suprafata);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.filtre button:hover {
+  border-color: var(--tech);
+}
+.filtre button:focus-visible {
+  outline: 3px solid var(--tech);
+  outline-offset: 3px;
+}
+.filtre button.activ {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+}

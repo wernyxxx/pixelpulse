@@ -1,0 +1,15 @@
+<section class="newsletter contentor" id="newsletter" aria-labelledby="newsletter-titlu">
+  <h2 id="newsletter-titlu">Nu pierde nicio noutate</h2>
+  <p>Primești un rezumat săptămânal direct în inbox, fără reclame.</p>
+
+  @if (trimis()) {
+    <p class="newsletter__succes">Mulțumim! Te-ai abonat cu {{ email() }}.</p>
+  } @else {
+    <form class="newsletter__form" (submit)="trimite($event)">
+      <label for="email">Adresa de e-mail</label>
+      <input type="email" id="email" name="email" placeholder="adresa@exemplu.ro"
+             [value]="email()" (input)="actualizeaza($event)" required>
+      <button class="buton buton--primar" type="submit" [disabled]="!valid()">Abonează-te</button>
+    </form>
+  }
+</section>

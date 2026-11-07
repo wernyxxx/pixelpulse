@@ -1,0 +1,39 @@
+:host {
+  display: block;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--suprafata);
+  border-bottom: 1px solid var(--linie);
+}
+.header__logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink);
+  text-decoration: none;
+}
+.header__logo span {
+  color: var(--tech);
+}
+.header__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header__nav a {
+  font-weight: 600;
+  text-decoration: none;
+}
+.header__nav a:hover,
+.header__nav a.activ {
+  color: var(--tech);
+}

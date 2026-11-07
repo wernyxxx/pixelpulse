@@ -1,0 +1,38 @@
+:host {
+  display: block;
+}
+
+.newsletter {
+  border-top: 1px solid var(--linie);
+}
+.newsletter__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.newsletter__form label {
+  flex-basis: 100%;
+  font-weight: 600;
+}
+.newsletter__form input {
+  flex: 1 1 16rem;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--linie);
+  border-radius: var(--raza);
+  background: var(--suprafata);
+  font: inherit;
+}
+.newsletter__form input:focus-visible {
+  outline: 3px solid var(--tech);
+  outline-offset: 2px;
+  border-color: var(--tech);
+}
+.newsletter__form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.newsletter__succes {
+  font-weight: 600;
+  color: var(--tech);
+}

@@ -1,0 +1,8 @@
+<aside class="top" id="top" aria-labelledby="top-titlu">
+  <h2 id="top-titlu">Cele mai citite</h2>
+  <ol class="top__lista">
+    @for (s of stiriService.top(); track s.id) {
+      <li><a routerLink="/stiri">{{ s.titlu }}</a></li>
+    }
+  </ol>
+</aside>

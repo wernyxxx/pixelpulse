@@ -1,0 +1,23 @@
+<div class="contentor">
+  <h1>Toate știrile</h1>
+
+  <div class="filtre" role="group" aria-label="Filtrare după categorie">
+    <button type="button" [class.activ]="filtru() === 'toate'" (click)="alege('toate')">Toate</button>
+    <button type="button" [class.activ]="filtru() === 'tech'" (click)="alege('tech')">Tech</button>
+    <button type="button" [class.activ]="filtru() === 'gaming'" (click)="alege('gaming')">Gaming</button>
+  </div>
+
+  @if (stiriService.seIncarca()) {
+    <p>Se încarcă…</p>
+  } @else if (stiriService.eroare()) {
+    <p class="eroare">{{ stiriService.eroare() }}</p>
+  } @else {
+    <div class="stiri__grid">
+      @for (s of filtrate(); track s.id) {
+        <app-stire-card [stire]="s" />
+      } @empty {
+        <p>Nu există știri în această categorie.</p>
+      }
+    </div>
+  }
+</div>
